@@ -1,0 +1,20 @@
+<!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+	  {%- if site.data[page.lang].header.title -%}
+        <div class="intro-heading">{{ site.data[page.lang].header.title | markdownify }}</div>
+	  {%- endif -%}
+	  {%- if site.data[page.lang].header.text -%}
+        <div class="intro-lead-in">{{ site.data[page.lang].header.text | markdownify }}</div>
+	  {%- endif -%}
+	  {%- if site.data[page.lang].header.subtext -%}
+        <div class="intro-subheading">{{ site.data[page.lang].header.subtext | markdownify }}</div>
+	  {%- endif -%}
+	  {%- if site.data[page.lang].header.button -%}
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data[page.lang].header.buttonlink }}">{{ site.data[page.lang].header.button }}</a>
+	  {%- endif -%}
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->

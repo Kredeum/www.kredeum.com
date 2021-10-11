@@ -1,0 +1,107 @@
+section: techs
+max-height: 100px
+horizontal-scrolling: ""
+list:
+  - title: "Ethereum"
+    url: https://ethereum.org/
+    logo: /assets/img/techs/ethereum.png
+  - title: "IPFS"
+    url: https://ipfs.io/
+    logo: /assets/img/techs/ipfs.png
+  - title: "ENS"
+    url: https://ens.domains/
+    logo: /assets/img/techs/ens.png
+  - title: "AAVE"
+    url: https://aave.com/
+    logo: /assets/img/techs/aave.png
+
+  - title: "Ethers.js"
+    url: https://docs.ethers.io/v5/
+    logo: /assets/img/techs/ethersjs.png
+  - title: "Open Zeppelin"
+    url: https://openzeppelin.com/
+    logo: /assets/img/techs/openzeppelin.png
+  - title: "The Graph"
+    url: https://thegraph.com/
+    logo: /assets/img/techs/thegraph.png
+  - title: "ERC20"
+    url: https://ethereum.org/en/developers/docs/standards/tokens/erc-20/
+    logo: /assets/img/techs/erc20.png
+
+  - title: "Metamask"
+    url: https://metamask.io/
+    logo: /assets/img/techs/metamask.svg
+  - title: "Solidity"
+    url: https://solidity.readthedocs.io/en/v0.7.4/
+    logo: /assets/img/techs/solidity.png
+  - title: "Dappnode"
+    url: https://dappnode.io/
+    logo: /assets/img/techs/dappnode.png
+  - title: "Chainlink"
+    url: https://chain.link/
+    logo: /assets/img/techs/chainlink.png
+
+  - title: "Infura"
+    url: https://infura.io/
+    logo: /assets/img/techs/infura.png
+  - title: "Hardhat"
+    url: https://hardhat.org/
+    logo: /assets/img/techs/hardhat.svg
+  - title: "Svelte"
+    url: https://www.svelte.dev/
+    logo: /assets/img/techs/svelte.png
+  - title: "Fleek"
+    url: https://fleek.co/
+    logo: /assets/img/techs/fleek.png
+# - title: "BitCoin"
+#   url: https://bitcoin.org/
+#   logo: /assets/img/techs/bitcoin.png
+# - title: "Solana"
+#   url: https://solana.com/
+#   logo: /assets/img/techs/solana.png
+# - title: "Tezos"
+#   url: https://tezos.com/
+#   logo: /assets/img/techs/tezos.png
+# - title: "Polkadot"
+#   url: https://polkadot.network/
+#   logo: /assets/img/techs/polkadot.png
+# - title: "xDAI"
+#   logo: /assets/img/techs/xdai.png
+#   url: https://www.xdaichain.com/
+# - title: "Unstoppable Domains"
+#   url: https://unstoppabledomains.com/
+#   logo: /assets/img/techs/unstoppabledomains.png
+# - title: "Web3.js"
+#   url: https://web3js.readthedocs.io/
+#   logo: /assets/img/techs/web3js.jpeg
+# - title: "Meteor"
+#   url: https://www.meteor.com/
+#   logo: /assets/img/techs/meteor.png
+# - title: "Truffle"
+#   url: https://www.truffle.com/
+#   logo: /assets/img/techs/truffle.png
+# - title: "Ledger"
+#   url: https://www.ledger.com/
+#   logo: /assets/img/techs/ledger.svg
+# - title: "Filecoin"
+#   url: https://filecoin.io/
+#   logo: /assets/img/techs/filecoin.png
+# - title: "ArWeave"
+#   url: https://www.arweave.org/
+#   logo: /assets/img/techs/arweave.png
+# - title: "Thether"
+#   url: https://tether.to/
+#   logo: /assets/img/techs/thether.png
+# - title: "Binance Smart Chain"
+#   url: https://www.binance.org/en/smartChain
+#   logo: /assets/img/techs/binancechain.png
+# - title: "Flow"
+#   url: https://www.onflow.org/
+#   logo: /assets/img/techs/flow.png
+# - title: "UniSwap"
+#   url: https://uniswap.org/
+#   logo: /assets/img/techs/uniswap.png
+
+# - title: "ERC721"
+#   url: hhttps://ethereum.org/en/developers/docs/standards/tokens/erc-721/
+#   logo: /assets/img/techs/erc721.png

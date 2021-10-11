@@ -1,0 +1,13 @@
+title: "Services"
+text: "Avec Kredeum construisez, en toute confiance, l’architecture blockchain répondant à votre besoin."
+section: services
+list:
+  - title: "Conseil"
+    desc: "Kredeum vous accompagne tout au long de la vie de votre projet : de la formalisation du besoin jusqu’à la mise en production sur la blockchain. Dans un premier temps, si nécessaire, nous sensibilisons et formons vos équipes lors de séminaires dédiés. Nous réalisons ensuite avec vous, études et preuves de concepts."
+    icon: fa fa-compass
+  - title: "Développement"
+    desc: "Le développement se déroule avec vous en mode agile de manière itérative, afin de coller au mieux à votre besoin. Avant chaque déploiement de votre architecture, nous appliquons une checklist sécurité adaptée à vos besoins : données personnelles/RGPD, intégrité et traçabilité des échanges monétaires, confidentialité de vos données d’entreprise…"
+    icon: fas fa-laptop       
+  - title: "Services Tech"
+    desc: "A la demande, vous pouvez bénéficier de notre expertise dans la mise en place des outils blockchain : hébergement / stockage décentralisé : site web, fichiers, documents enregistrement nom de domaines .eth .crypto assistance technique dans la mise en place de PoC: monnaie erc20 ou NFT erc721, site web décentralisé, solution de vote, SSO, gestion « cold wallet » (Ledger), oracles (Chainlink)"
+    icon: fas fa-tools

@@ -1,0 +1,22 @@
+{% if site.data.techs %}
+<!-- techs -->
+  <section class="py-5" id="{{ site.data.techs.section | default: "techs" }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">{{ site.data[page.lang].techs.title }}</h2>
+          <h3 class="section-subheading text-muted">{{ site.data[page.lang].techs.text | markdownify | default: "" }}</h3>
+        </div>
+      </div>
+      <div class="row align-items-center" {% if site.data.techs.horizontal-scrolling == "yes" %} id="scrolling-techs" {% endif %}>
+	  {% for tech in site.data.techs.list %}
+        <div class="col-md-3 col-sm-6 mt-5">
+          <a href="{{ tech.url }}">
+            <img class="img-fluid d-block mx-auto" src="{{ tech.logo }}" alt="{{ tech.title }}" style="max-height: {{ site.data.techs.max-height | default: "100px" }}">
+          </a>
+        </div>
+	  {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}

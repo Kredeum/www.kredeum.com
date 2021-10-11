@@ -1,0 +1,6 @@
+header-image: "../img/header.jpg"
+contact-image: "../img/contact.png"
+
+logo:
+  path: /assets/img/logos/kredeum.png
+  height: 60

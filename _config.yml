@@ -1,0 +1,15 @@
+url    : "https://www.kredeum.com" 
+baseurl: ""
+
+title      : Kredeum
+email      : contact@kredeum.com 
+description: "Conception et mise en oeuvre d’architectures blockchain pour l’entreprise"
+author     : Alain Papazoglou
+  
+analytics:
+  google: UA-179076153-1
+
+collections:
+  portfolio:
+
+markdown: kramdown

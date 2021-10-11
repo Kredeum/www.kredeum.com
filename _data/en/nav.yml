@@ -1,0 +1,11 @@
+- title: "Services"
+  section: services
+
+- title: "Techs"
+  section: techs
+
+- title: "Team"
+  section: team
+
+- title: "Labs"
+  page: labs.html

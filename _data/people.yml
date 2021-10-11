@@ -1,0 +1,30 @@
+- name: Yoann Lesouef
+  image: yoann.jpg
+  role: Co-founder
+  social:
+    - icon: fab fa-twitter
+      url: https://twitter.com/YoannLesouef
+    - icon: fab fa-linkedin-in
+      url: https://www.linkedin.com/in/yoann-lesouef-08212b2
+    - icon: fas fa-at
+      url: mailto:yoann.lesouef@kredeum.com
+
+- name: Alexandre Rouillet
+  image: alex.jpg
+  role: Co-founder
+  social:
+    - icon: fab fa-twitter
+      url: https://twitter.com/AlexRouillet
+    - icon: fab fa-linkedin-in
+      url: https://www.linkedin.com/in/alexandre-rouillet-ab0a992a
+
+- name: Alain Papazoglou
+  image: alain.jpg
+  role: Co-founder
+  social:
+    - icon: fab fa-twitter
+      url: https://twitter.com/papaz
+    - icon: fab fa-linkedin-in
+      url: https://www.linkedin.com/in/alain
+    - icon: fas fa-at
+      url: mailto:alain.papazoglou@kredeum.com

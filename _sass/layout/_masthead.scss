@@ -1,0 +1,70 @@
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url("#{$header-image}");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include serif-font;
+    }
+    .intro-heading {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 50px;
+      @include kredeum-font;
+    }
+    .intro-subheading {
+      margin-bottom: 50px;
+      text-transform: none;
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 80;
+      @include heading-font;
+    }
+  }
+}
+@media(min-width:768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+      .intro-lead-in {
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include serif-font;
+      }
+      .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        @include kredeum-font;
+      }
+      .intro-subheading {
+          margin-bottom: 75px;
+          text-transform: none;
+          font-size: 20px;
+          font-style: italic;
+          font-weight: 100;
+          @include heading-font;
+      }
+    }
+  }
+}
