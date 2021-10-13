@@ -22,7 +22,7 @@ var config = {
 
 // Clean assets
 function clean() {
-    return del(["./assets/"]);
+    return del(["./www/assets/"]);
 }
 
 function swallow(err) {
@@ -35,7 +35,7 @@ function swallow(err) {
 function images() {
     return gulp
         .src("./src/images/**/*")
-        .pipe(newer("./assets/images"))
+        .pipe(newer("./www/assets/images"))
         .pipe(
           imagemin([
             imagemin.gifsicle({ interlaced: true }),
@@ -51,7 +51,7 @@ function images() {
             })
           ])
         )
-        .pipe(gulp.dest("./assets/images"));
+        .pipe(gulp.dest("./www/assets/images"));
 }
 
 // CSS task
@@ -63,13 +63,13 @@ function css() {
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError, swallow))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.', { sourceRoot: 'css-source' }))
-        .pipe(gulp.dest("./assets/css/"))
+        .pipe(gulp.dest("./www/assets/css/"))
 }
 
 function fonts() {
     return gulp
         .src(["./src/fonts/**/*"])
-        .pipe(gulp.dest("./assets/fonts/"))
+        .pipe(gulp.dest("./www/assets/fonts/"))
 }
 
 // Transpile, concatenate and minify scripts
@@ -78,7 +78,7 @@ function scripts() {
         .src(["./src/js/**/*"])
         .pipe(plumber())
         .pipe(!config.production ? uglify().on('error', swallow) : util.noop())
-        .pipe(gulp.dest("./assets/js/"))
+        .pipe(gulp.dest("./www/assets/js/"))
 }
 
 // Watch files
