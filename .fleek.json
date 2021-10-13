@@ -1,0 +1,12 @@
+{
+  "build": {
+    "image": "node:alpine",
+    "command": "npm install && npx gulp",
+    "publicDir": "/",
+    "baseDir": "/",
+    "environment": {
+    }
+  }
+ }
+ 
+ 
