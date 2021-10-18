@@ -235,14 +235,17 @@ main {
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
         }
     }
-
-    #project {
+    
+    #project,
+    #faq {
         background: $white;
-
-        h2, h3, p {
+        
+        h2, h3, p, label {
             color: $couleur1;
         }
+    }
 
+    #project {
         .list {
             margin-bottom: 120px;
 
@@ -286,6 +289,77 @@ main {
                 margin-bottom: 10px;
             }
         }
+    }
+    
+    #faq {
+        padding-bottom: 100px;
+        
+        .tabs {
+            margin: 20px 0;
+        }
+        
+        input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        
+        .tab {
+            width: 100%;
+            color: white;
+            overflow: hidden;
+            @include border-radius();
+            border: 1px solid rgba($grey-blue, 0.3);
+            padding: 20px;
+            margin-bottom: 10px;
+
+            &-label {
+                display: flex;
+                justify-content: space-between;
+                opacity: 0.6;     
+                font-weight: bold;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+                color: $grey-blue;
+                
+                &::after {
+                    content: "\276F";
+                    width: 1em;
+                    height: 1em;
+                    text-align: center;
+                    transition: all .35s;
+                    transform: rotate(90deg);
+                }
+            }
+            
+            &-content {
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                transition: all .35s;
+                
+                p {
+                    margin: 0 0 10px 0;
+                    opacity: 1;
+                }
+            }
+        }
+        
+        input:checked {
+            + .tab-label {
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+            
+            ~ .tab-content {
+                max-height: 100vh;
+                opacity: 1;
+                visibility: visible;
+                margin-top: 20px;
+            }
+        }    
     }
 }
 
