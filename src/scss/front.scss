@@ -237,7 +237,8 @@ main {
     }
     
     #project,
-    #faq {
+    #faq,
+    #wp {
         background: $white;
         
         h2, h3, p, label {
@@ -247,12 +248,20 @@ main {
 
     #project {
         .list {
-            margin-bottom: 120px;
+            margin: 80px 0;
 
             .col {
                 padding-top: 60px;
-
-                &:nth-child(1) {
+                
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-bottom: 50px;
+                }
+                
+                &:nth-child(1),
+                &:nth-child(8) {
                     background: url("../images/icon-fast.svg") no-repeat 40px top;
                 }
 
@@ -266,6 +275,18 @@ main {
 
                 &:nth-child(4) {
                     background: url("../images/icon-scalable.svg") no-repeat 40px top;
+                }
+                
+                &:nth-child(5) {
+                    background: url("../images/icon-decentralized.svg") no-repeat 40px top;
+                }
+                
+                &:nth-child(6) {
+                    background: url("../images/icon-multichain.svg") no-repeat 40px top;
+                }
+                
+                &:nth-child(7) {
+                    background: url("../images/icon-collection.svg") no-repeat 40px top;
                 }
             }
         }
@@ -289,6 +310,10 @@ main {
                 margin-bottom: 10px;
             }
         }
+    }
+    
+    #wp {
+        
     }
     
     #faq {

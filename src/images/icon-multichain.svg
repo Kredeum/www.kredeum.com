@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="48px" viewBox="0 0 47 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>transactions</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Kredeum_site_V2" transform="translate(-450.000000, -2011.000000)" stroke="#FFB30D" stroke-width="3">
+            <g id="Group-16" transform="translate(134.750000, 1745.240960)">
+                <g id="Group-9" transform="translate(316.025828, 267.858429)">
+                    <g id="transactions" transform="translate(1.320924, 0.000000)">
+                        <path d="M11.639,6.5 C3.1787958,11.1631008 -0.724336885,21.2181436 2.374,30.368" id="Path"></path>
+                        <circle id="Oval" cx="4" cy="34" r="4"></circle>
+                        <path d="M36.302,37.219 C29.9334087,44.4724337 19.2817305,46.118154 11.021,41.125" id="Path"></path>
+                        <path d="M41.321,24.365 C41.321,24.244 41.326,24.122 41.326,24 C41.3235965,14.4808056 34.6122143,6.28242044 25.281,4.4" id="Path"></path>
+                        <circle id="Oval" cx="38.642" cy="34" r="4"></circle>
+                        <circle id="Oval" cx="21.321" cy="4" r="4"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
