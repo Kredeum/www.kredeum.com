@@ -1,2 +1,13 @@
 @import '_variables';
 @import 'core/_mixins';
+
+main {
+	#wp {
+		.images {
+			.img-1 {
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+}

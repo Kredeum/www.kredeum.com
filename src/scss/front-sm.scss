@@ -60,6 +60,14 @@ main {
     
     #wp {
         padding-bottom: 150px;
+
+		.images {
+			.img-1 {
+				bottom: -5%;
+				right: 20px;
+				width: 160px;
+			}
+		}
     }
 }
 

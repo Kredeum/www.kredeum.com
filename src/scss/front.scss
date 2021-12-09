@@ -236,10 +236,15 @@ main {
         }
     }
     
+	.sections {
+		background: $white;
+	}
+	
     #project,
     #faq,
     #wp {
-        background: $white;
+		position: relative;
+		z-index: 10;
         
         h2, h3, p, label {
             color: $couleur1;
@@ -345,10 +350,9 @@ main {
 			}
 			
 			.img-1 {
-				bottom: 5%;
-				right: 5%;
 				z-index: 1;
 				position: absolute;
+				border-radius: 8px;
 			}
 			
 			.img-2 {
@@ -356,6 +360,7 @@ main {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%,-50%);
+				border-radius: 12px;
 			}
 		}
     }
