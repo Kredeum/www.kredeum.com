@@ -55,7 +55,25 @@ main {
 	}
 
     #project {
-        padding: 150px 0;
+        padding: 150px 0 100px 0;
+		
+		.list {
+			.col {
+				background-position: 40px top;
+			}
+		}
+    }
+    
+    #wp {
+        padding-bottom: 150px;
+
+		.images {
+			.img-1 {
+				bottom: -5%;
+				right: 20px;
+				width: 160px;
+			}
+		}
     }
 }
 

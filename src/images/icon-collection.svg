@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>archive</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Kredeum_site_V2" transform="translate(-776.000000, -2011.000000)" stroke="#CD8FE3" stroke-width="3">
+            <g id="Group-16" transform="translate(134.750000, 1745.240960)">
+                <g id="Group-10" transform="translate(641.500000, 267.972957)">
+                    <g id="archive" transform="translate(2.155172, 0.000000)">
+                        <polyline id="Path" points="0 23.8607143 12.6321429 23.8607143 12.6321429 29.475 26.6678571 29.475 26.6678571 23.8607143 39.3 23.8607143"></polyline>
+                        <rect id="Rectangle" stroke-linecap="square" x="0" y="0" width="39.3" height="39.3" rx="3"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

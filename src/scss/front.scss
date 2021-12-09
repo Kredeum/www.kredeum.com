@@ -77,9 +77,9 @@ main {
     .hero {
         position: relative;
 
-        p {
-            margin: 30px 0;
-        }
+		h1 {
+			margin-bottom: 30px;
+		}
 
         .schema {
             background: url("../images/bg-schema.svg") no-repeat center center;
@@ -236,9 +236,15 @@ main {
         }
     }
     
+	.sections {
+		background: $white;
+	}
+	
     #project,
-    #faq {
-        background: $white;
+    #faq,
+    #wp {
+		position: relative;
+		z-index: 10;
         
         h2, h3, p, label {
             color: $couleur1;
@@ -247,25 +253,46 @@ main {
 
     #project {
         .list {
-            margin-bottom: 120px;
+            margin: 80px 0;
 
             .col {
                 padding-top: 60px;
-
-                &:nth-child(1) {
-                    background: url("../images/icon-fast.svg") no-repeat 40px top;
+                background-repeat: no-repeat;
+				
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-bottom: 50px;
+                }
+                
+                &:nth-child(1),
+                &:nth-child(8) {
+                    background-image: url("../images/icon-fast.svg");
                 }
 
                 &:nth-child(2) {
-                    background: url("../images/icon-secure.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-secure.svg");
                 }
 
                 &:nth-child(3) {
-                    background: url("../images/icon-global.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-global.svg");
                 }
 
                 &:nth-child(4) {
-                    background: url("../images/icon-scalable.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-scalable.svg");
+                }
+                
+                &:nth-child(5) {
+                    background-image: url("../images/icon-decentralized.svg");
+                }
+                
+                &:nth-child(7) {
+                    background-image: url("../images/icon-multichain.svg");
+                }
+                
+                &:nth-child(6) {
+                    background-image: url("../images/icon-collection.svg");
                 }
             }
         }
@@ -289,6 +316,54 @@ main {
                 margin-bottom: 10px;
             }
         }
+    }
+    
+    #wp {
+        h3 {
+			margin-top: 10px;
+		}
+		
+		ul {
+			margin: 50px 0;
+			
+			li {
+				color: $couleur1;
+				line-height: 1;
+				
+				&:before {
+					content: '•';
+					color: $green;
+					font-size: 30px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+				
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		
+		.images {
+			img {
+				box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+			}
+			
+			.img-1 {
+				z-index: 1;
+				position: absolute;
+				border-radius: 8px;
+			}
+			
+			.img-2 {
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 12px;
+			}
+		}
     }
     
     #faq {

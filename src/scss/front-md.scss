@@ -3,6 +3,10 @@
 
 
 main {
+	.sections {
+		background: $white url("../images/bg-main.png") no-repeat -50% 500px;
+	}
+	
     .hero {
         margin-top: 18vh;
 
@@ -21,4 +25,14 @@ main {
             margin-bottom: 200px;
         }
     }
+	
+	#wp {
+		.images {
+			.img-1 {
+				bottom: 12%;
+				right: 2%;
+				width: 128px;
+			}
+		}
+	}
 }
