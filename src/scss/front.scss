@@ -257,7 +257,8 @@ main {
 
             .col {
                 padding-top: 60px;
-                
+                background-repeat: no-repeat;
+				
                 &:nth-child(1),
                 &:nth-child(2),
                 &:nth-child(3),
@@ -267,31 +268,31 @@ main {
                 
                 &:nth-child(1),
                 &:nth-child(8) {
-                    background: url("../images/icon-fast.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-fast.svg");
                 }
 
                 &:nth-child(2) {
-                    background: url("../images/icon-secure.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-secure.svg");
                 }
 
                 &:nth-child(3) {
-                    background: url("../images/icon-global.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-global.svg");
                 }
 
                 &:nth-child(4) {
-                    background: url("../images/icon-scalable.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-scalable.svg");
                 }
                 
                 &:nth-child(5) {
-                    background: url("../images/icon-decentralized.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-decentralized.svg");
                 }
                 
                 &:nth-child(7) {
-                    background: url("../images/icon-multichain.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-multichain.svg");
                 }
                 
                 &:nth-child(6) {
-                    background: url("../images/icon-collection.svg") no-repeat 40px top;
+                    background-image: url("../images/icon-collection.svg");
                 }
             }
         }

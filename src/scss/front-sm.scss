@@ -56,6 +56,12 @@ main {
 
     #project {
         padding: 150px 0;
+		
+		.list {
+			.col {
+				background-position: 40px top;
+			}
+		}
     }
     
     #wp {
