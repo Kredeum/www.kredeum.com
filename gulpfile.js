@@ -1,99 +1,67 @@
-"use strict";
+import gulp from "gulp";
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
-const del = require("del");
-const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
-const newer = require("gulp-newer");
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const uglify = require("gulp-uglify");
-const log = require("fancy-log");
-const sourcemaps = require('gulp-sourcemaps');
-const util = require('gulp-util');
-const gulpif = require('gulp-if');
+import autoprefixer from "autoprefixer";
+import plumber from "gulp-plumber";
+import cssnano from "cssnano";
+import postcss from "gulp-postcss";
+import sourcemaps from "gulp-sourcemaps";
 
-var config = {
-    production: !!util.env.production
-};
-
-// Clean assets
-function clean() {
-    return del(["./www/assets/"]);
-}
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
 
 function swallow(err) {
-    console.log(err.message);
-    this.emit('end');
+  console.error(err.message);
+  this.emit("end");
 }
 
-
-// Optimize Images
 function images() {
-    return gulp
-        .src("./src/images/**/*")
-        .pipe(newer("./www/assets/images"))
-        .pipe(
-          imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.mozjpeg({ progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({
-              plugins: [
-                {
-                  removeViewBox: false,
-                  collapseGroups: true
-                }
-              ]
-            })
-          ])
-        )
-        .pipe(gulp.dest("./www/assets/images"));
+  return gulp
+    .src("src/images/**/*")
+    .pipe(
+      imagemin([
+        gifsicle({ interlaced: true }),
+        mozjpeg({ progressive: true }),
+        optipng({ optimizationLevel: 5 }),
+        svgo({
+          plugins: [
+            {
+              name: 'removeViewBox',
+              active: false
+            },
+            {
+              name: 'collapseGroups',
+              active: true
+            }
+          ],
+        }),
+      ])
+    )
+    .pipe(gulp.dest("www/assets/images"));
 }
 
-// CSS task
 function css() {
-    return gulp
-        .src("./src/scss/**/*.scss")
-        .pipe(!config.production ? sourcemaps.init() : util.noop())
-        .pipe(plumber())
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError, swallow))
-        .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(sourcemaps.write('.', { sourceRoot: 'css-source' }))
-        .pipe(gulp.dest("./www/assets/css/"))
+  return gulp
+    .src("src/scss/**/*.scss")
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError, swallow))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write(".", { sourceRoot: "css-source" }))
+    .pipe(gulp.dest("www/assets/css/"));
+}
+
+function js() {
+  return gulp
+    .src(["./src/js/**/*"])
+    .pipe(plumber())
+    .pipe(gulp.dest("./www/assets/js/"))
 }
 
 function fonts() {
-    return gulp
-        .src(["./src/fonts/**/*"])
-        .pipe(gulp.dest("./www/assets/fonts/"))
+  return gulp.src(["src/fonts/**/*"]).pipe(gulp.dest("www/assets/fonts/"));
 }
 
-// Transpile, concatenate and minify scripts
-function scripts() {
-    return gulp
-        .src(["./src/js/**/*"])
-        .pipe(plumber())
-        .pipe(!config.production ? uglify().on('error', swallow) : util.noop())
-        .pipe(gulp.dest("./www/assets/js/"))
-}
+const build = gulp.series(js, css, fonts, images);
 
-// Watch files
-function watchFiles() {
-    gulp.watch("./src/scss/**/*", css);
-    gulp.watch("./src/js/**/*", gulp.series(scripts));
-    gulp.watch("./src/images/**/*", images);
-}
-
-const build = gulp.series(clean, gulp.parallel(css, images, scripts), fonts);
-const watch = gulp.parallel(watchFiles);
-
-exports.images = images;
-exports.css = css;
-exports.clean = clean;
-exports.build = build;
-exports.watch = watch;
-exports.default = build;
+export default build;
