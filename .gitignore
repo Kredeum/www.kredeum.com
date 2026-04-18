@@ -1,4 +1,5 @@
 node_modules
 package-lock.json
-www/assets/*
+www/assets/**/*.map
 .DS_Store
+.netlify
