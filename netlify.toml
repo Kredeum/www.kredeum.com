@@ -1,0 +1,29 @@
+# Netlify configuration for www.kredeum.com
+# Site 100% statique : aucun build côté Netlify, on sert directement www/.
+# Les sources SCSS/JS/images vivent dans src/ et sont compilées localement
+# (voir README.md) puis committées dans www/assets/.
+
+[build]
+  publish = "www"
+  # Pas de "command" : Netlify publie www/ tel quel.
+
+# Cache agressif pour les assets versionnés par le chemin /assets/.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache court pour le HTML racine afin de pouvoir déployer des correctifs rapidement.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# En-têtes de sécurité de base pour un site vitrine statique.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
