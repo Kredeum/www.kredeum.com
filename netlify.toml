@@ -4,8 +4,12 @@
 # (voir README.md) puis committées dans www/assets/.
 
 [build]
-  publish = "www"
-  # Pas de "command" : Netlify publie www/ tel quel.
+  # On limite Netlify au sous-dossier www/ pour qu'il n'y voie pas
+  # le package.json racine (qui dépend de node-sass, KO sur Node 22).
+  # Résultat : aucune installation de dépendances, aucun build, publication directe.
+  base    = "www"
+  publish = "."
+  # Pas de "command" : rien à builder.
 
 # Cache agressif pour les assets versionnés par le chemin /assets/.
 [[headers]]

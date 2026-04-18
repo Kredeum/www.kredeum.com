@@ -16,9 +16,11 @@ Site vitrine statique de Kredeum — déployé sur Netlify à partir du dossier 
 
 ## Déploiement Netlify
 
-Netlify sert le dossier `www/` tel quel — **aucune commande de build n'est exécutée
-côté Netlify**. Pour mettre à jour le site en production, il suffit donc de committer
-et pousser les fichiers finaux dans `www/` sur la branche suivie par Netlify.
+Netlify est configuré (via `netlify.toml`) avec `base = "www"` et `publish = "."`,
+donc il ne voit que le contenu de `www/`. Le `package.json` racine (qui dépend du
+vieux `node-sass`) reste **invisible** côté Netlify : aucun `npm install`, aucun
+build n'est déclenché. Pour mettre à jour le site en production, il suffit de
+committer et pousser les fichiers finaux dans `www/` sur la branche suivie par Netlify.
 
 ## Modifier le site
 
